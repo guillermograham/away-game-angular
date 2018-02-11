@@ -1,6 +1,11 @@
 <section>
   <h2>Matches page</h2>
-  <ul>
-
-  </ul>
+  <div ng-repeat="match in vm.all">
+    <div ng-if="match.status === 'SCHEDULED'">
+      <p>{{ match.date }}</p>
+      <p>{{ match.status }}</p>
+      <p>{{ match.homeTeamName }}</p>
+      <p>{{ match.awayTeamName }}</p>
+    </div>
+  </div>
 </section>

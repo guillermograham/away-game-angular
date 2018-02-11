@@ -10,7 +10,8 @@ function MatchesIndexCtrl($http) {
   $http
     .get('/api/matches')
     .then(res => {
-      console.log(res.data);
+      console.log(res.data.fixtures);
+      vm.all = res.data.fixtures;
     });
 
 }

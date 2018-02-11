@@ -4,14 +4,10 @@ angular
 
 
 
-MainCtrl.$inject = ['$http'];
-function MainCtrl($http) {
+MainCtrl.$inject = [];
+function MainCtrl() {
 
 
-  $http
-    .get('/api/matches')
-    .then(res => {
-      console.log(res);
-    });
+
 
 }

@@ -5,6 +5,8 @@ angular
 MatchesIndexCtrl.$inject = ['$http'];
 function MatchesIndexCtrl($http) {
 
+  const vm = this;
+
   $http
     .get('/api/matches')
     .then(res => {

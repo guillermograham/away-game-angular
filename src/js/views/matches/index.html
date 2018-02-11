@@ -3,7 +3,7 @@
   <div ng-repeat="match in vm.all">
     <div ng-if="match.status === 'SCHEDULED'">
       <p>{{ match.date | date }}</p>
-      <p>{{ match.date | date: 'h:mm' : '+0000' }}</p>
+      <p>{{ match.date | date: 'hh:mm' : '+0000' }}</p>
       <p>{{ match.status }}</p>
       <p>{{ match.homeTeamName }}</p>
       <p>{{ match.awayTeamName }}</p>

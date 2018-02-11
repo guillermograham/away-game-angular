@@ -5,7 +5,6 @@ const bluebird   = require('bluebird');
 const bodyParser = require('body-parser');
 const app        = express();
 const env        = app.get('env');
-const moment = require('moment');
 
 const { port, db }    = require('./config/environment');
 const customResponses = require('./lib/customResponses');
@@ -22,7 +21,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(dest));
 
-app.locals.moment = moment;
 app.use(customResponses);
 app.use('/api', routes);
 app.get('/*', (req, res) => res.sendFile(`${dest}/index.html`));

@@ -1,3 +1,3 @@
 // angular module goes here
 angular
-  .module('awayGameApp', []);
+  .module('awayGameApp', ['ui.router']);

@@ -25,13 +25,13 @@
       <a class="navbar-item" ui-sref="matches">
         Matches
       </a>
-      <a class="navbar-item" ui-sref="login">
+      <a class="navbar-item" ui-sref="login" ng-if="!vm.isAuthenticated()">
         Login
       </a>
-      <a class="navbar-item" ui-sref="register">
+      <a class="navbar-item" ui-sref="register" ng-if="!vm.isAuthenticated()">
         Register
       </a>
-      <a class="navbar-item" ng-click="main.logout()">
+      <a class="navbar-item" ng-click="vm.logout()" ng-if="vm.isAuthenticated()">
         Logout
       </a>
     </div>

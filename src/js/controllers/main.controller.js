@@ -4,10 +4,19 @@ angular
 
 
 
-MainCtrl.$inject = [];
-function MainCtrl() {
+MainCtrl.$inject = ['$auth', '$state'];
+function MainCtrl($auth, $state) {
 
+  const vm = this;
 
+  vm.isAuthenticated = $auth.isAuthenticated;
+
+  function logout() {
+    $auth.logout();
+    $state.go('home');
+  }
+
+  vm.logout = logout;
 
 
 }

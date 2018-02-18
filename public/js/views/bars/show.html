@@ -1,0 +1,11 @@
+<h2>{{ vm.bar.name }}</h2>
+
+{{ vm.bar.fixtures }}
+
+<div ng-repeat="fixture in vm.bar.fixtures track by $index">
+  <div>
+    <p>{{ fixture.date }}</p>
+    <p>{{ fixture.teams[0] }}</p>
+    <p>{{ fixture.teams[1] }}</p>
+  </div>
+</div>

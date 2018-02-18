@@ -4,12 +4,14 @@ const router  = express.Router();
 const auth = require('../controllers/auth');
 const bar = require('../controllers/bar');
 const match = require('../controllers/match');
+const user = require('../controllers/user');
+const secureRoute = require('../lib/secureRoute');
 
 
 // Routes go here
 router.route('/bars')
   .get(bar.index)
-  .post(bar.create);
+  .post(secureRoute, bar.create);
 
 router.route('/bars/:id')
   .get(bar.show)
@@ -22,7 +24,16 @@ router.route('/bars/:id/reviews/:reviewId')
   .delete(bar.deleteReview);
 
 router.route('/matches')
-  .get(match.index);
+  .get(secureRoute, match.index);
+
+router.route('/matches/:matchCode/screen')
+  .post(secureRoute, match.create);
+
+router.route('/users')
+  .get(user.index);
+
+router.route('/users/:id')
+  .get(user.show);
 
 router.route('/register')
   .post(auth.register);

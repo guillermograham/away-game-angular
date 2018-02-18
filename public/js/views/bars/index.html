@@ -1,0 +1,9 @@
+<h2>Bars Index</h2>
+
+<div ng-repeat="bar in vm.all">
+  <div>
+    <a ui-sref="barShow({ id: bar._id })"<p>{{ bar.name }}</p>
+    <p>{{ bar.fixtures }}</p>
+    <p>{{ bar._id }}</p>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<h2>Register</h2>
+<form ng-submit="vm.submit()">
+  <label for="username">Username</label>
+  <input type="text" id="username" ng-model="vm.user.username">
+
+  <label for="email">Email</label>
+  <input type="email" id="email" ng-model="vm.user.email">
+
+  <label for="password">Password</label>
+  <input type="password" id="password" ng-model="vm.user.password">
+
+  <label for="passwordConfirmation">Password confirmation</label>
+  <input type="password" id="passwordConfirmation" ng-model="vm.user.passwordConfirmation">
+
+  <button>Submit</button>
+</form>

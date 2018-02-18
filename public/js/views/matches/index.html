@@ -1,5 +1,6 @@
 <section>
   <h2>Matches page</h2>
+  {{ vm.user }}
   <div ng-repeat="match in vm.all">
     <div ng-if="match.status === 'SCHEDULED'">
       <p>{{ match.date | date }}</p>
@@ -7,6 +8,8 @@
       <p>{{ match.status }}</p>
       <p>{{ match.homeTeamName }}</p>
       <p>{{ match.awayTeamName }}</p>
+      <p>{{ match._links.self.href }}</p>
+      <a ng-click="vm.getMatch(match.date, match.homeTeamName, match.awayTeamName, match._links.self.href)">Show this in my bar</a>
     </div>
   </div>
 </section>

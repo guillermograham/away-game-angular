@@ -19,13 +19,25 @@
       <a class="navbar-item" ui-sref="barsIndex">
         Bars
       </a>
+      <a class="navbar-item" ui-sref="barsNew">
+        Add new bar
+      </a>
       <a class="navbar-item" ui-sref="matches">
         Matches
+      </a>
+      <a class="navbar-item" ui-sref="login">
+        Login
+      </a>
+      <a class="navbar-item" ui-sref="register">
+        Register
+      </a>
+      <a class="navbar-item" ng-click="main.logout()">
+        Logout
       </a>
     </div>
   </nav>
   <h1>awayGame</h1>
-  {{ 1+ 1}}
+  user: {{ vm.user }}
   <main ui-view>
 
   </main>
